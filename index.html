@@ -7,6 +7,83 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="scripts.js" defer></script>
+    <style>
+        
+
+#popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the popup content (image) */
+        #popup img {
+            max-width: 60%;
+            max-height: 60%;
+            border-radius: 8px;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 80px;
+            right: 100px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #960303;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #960303;
+}
+.instagram-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 1rem; /* Adds space between the items */
+    padding: 1rem;
+}
+
+.instagram-item {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 items per row on large screens, responsive */
+    max-width: 100%;
+}
+
+.instagram-media {
+    width: 100% !important; /* Ensures the blockquote takes full width of the container */
+    margin: 0 auto; /* Centers each item */
+}
+
+@media (max-width: 768px) {
+    .instagram-item {
+        flex: 1 1 calc(50% - 1rem); /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-item {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+    }
+}
+</style>
 </head>
 <body class="bg-black text-white">
     <nav class="navbar">
@@ -23,7 +100,12 @@
             </div>
         </div>
     </nav>
-
+    <div id="popup">
+        <!-- Close button -->
+        <div class="close-btn" onclick="closePopup()">×</div>
+        <!-- Popup image --><center>
+      <a href="kyc.html" target="_blank"><img src="KYC pop up.webp" alt="Popup Image"></a></center>
+    </div>
     <section id="about-us" class="section">
         <div class="container about-us-content">
             <div class="text-content">
@@ -35,6 +117,26 @@
             </div>
         </div>
     </section>
+    <div class="instagram-container">
+        <div class="instagram-item">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C-k7Vzmqo7g/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <!-- Your Blockquote Content Here -->
+            </blockquote>
+        </div>
+        <div class="instagram-item">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C-k5m5JzkoQ/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <!-- Your Blockquote Content Here -->
+            </blockquote>
+        </div>
+        <div class="instagram-item">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C-k4a7XKq_p/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <!-- Your Blockquote Content Here -->
+            </blockquote>
+        </div>
+    </div>
+    <script async onerror="var a=document.createElement('script');a.src='https://iframely.net/files/instagram_embed.js';document.body.appendChild(a);" src="https://www.instagram.com/embed.js"></script>
+    <br>
+
 
     <section id="our-team" class="section section-dark">
         <div class="container">
@@ -103,7 +205,7 @@
             </div>
         </div>
     </section>
-
+<!--
     <section id="community-glimpse" class="section">
         <div class="container">
             <h2>Glimpse</h2>
@@ -144,7 +246,7 @@
                 <!-- Add more slides as needed -->
             </div>
         </div>
-    </section>
+    </section> -->
     
 
     <section id="clubs" class="section section-dark">
@@ -311,7 +413,7 @@
                             <p>President: Ramani</p>
                         </div>
                     </div></a>
-                    <a href="#" target="_blank" style="text-decoration: none;">   <div class="club">
+                    <a href="https://sites.google.com/view/humanique-woxsen/home" target="_blank" style="text-decoration: none;">   <div class="club">
                         <img src="hr club.png" alt="Club 2">
                         <div class="club-info">
                             <h4>Humanique - The HR club</h4>
@@ -325,7 +427,7 @@
                             <p>President: Vedehi</p>
                         </div>
                     </div></a>
-                    <a href="#" target="_blank" style="text-decoration: none;">    <div class="club">
+                    <a href="https://sites.google.com/view/tech-club-woxsen/home" target="_blank" style="text-decoration: none;">    <div class="club">
                         <img src="Techclub_20240808_174715_0000 - Adip.png" alt="Club 2">
                         <div class="club-info">
                             <h4>Technology Club</h4>
@@ -397,12 +499,7 @@
         </div>
     </section>
 
-    <section id="qna" class="section section-dark">
-        <div class="container">
-            <h2 style="font-size: 150px; ">Q&A</h2>
-            <br><br>
-        </div>
-    </section>
+
 
     <section id="join-us" class="section">
         <div class="container">
@@ -422,5 +519,21 @@
     <footer class="text-center section-dark">
         <p>&copy;WOXSEN UNIVERISTY - STUDENT COUNCIL</p>
     </footer>
+    
+<script>
+    function openPopup() {
+             document.getElementById('popup').style.display = 'flex';
+         }
+ 
+         // Function to close the popup
+         function closePopup() {
+             document.getElementById('popup').style.display = 'none';
+         }
+ 
+         // Automatically open the popup when the page loads
+         window.onload = function() {
+             openPopup();}
+ 
+ </script>
 </body>
 </html>
